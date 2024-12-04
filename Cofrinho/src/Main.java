@@ -15,7 +15,7 @@ public class Main {
         int removermoeda;
         int escolha = 0;
         String opcao = "n";
-        int indice;
+        MoedaClasseAbstrata indice;
 
         while (escolha != 5){
             System.out.println();
@@ -69,9 +69,9 @@ public class Main {
                     System.out.println("\nA opção remover moeda foi selecionada.");
 
                     System.out.println("Índice que deseja remover");
-                    indice = scanner.nextInt();
+                    indice = scanner.next();
 
-                    cofrinho.removerMoeda();
+                    cofrinho.removerMoeda(indice);
                     break;
                 case 3:
                     System.out.println("\nA opção listar moedas foi selecionada.\n");
