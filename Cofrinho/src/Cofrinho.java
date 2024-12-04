@@ -15,6 +15,10 @@ public class Cofrinho {
         moedas.remove(moeda);
     }
 
+    public void mostrarMoeda(){
+        System.out.println(moedas);
+    }
+
     public void listarMoedas() {
         if (moedas.isEmpty()){
             System.out.println("O cofrinho está vazio. ");

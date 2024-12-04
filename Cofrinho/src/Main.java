@@ -66,12 +66,10 @@ public class Main {
                     } else System.out.println("Tipo de moeda inválido!");
                     break;
                 case 2:
-                    System.out.println("\nA opção remover moeda foi selecionada.");
 
-                    System.out.println("Índice que deseja remover");
-                    indice = scanner.next();
+                    
 
-                    cofrinho.removerMoeda(indice);
+                    cofrinho.mostrarMoeda();
                     break;
                 case 3:
                     System.out.println("\nA opção listar moedas foi selecionada.\n");
