@@ -67,9 +67,37 @@ public class Main {
                     break;
                 case 2:
 
-                    
+                    System.out.println("=-=-=-= Remoção da moeda =-=-=-=");
+                    System.out.print("\nTipo da moda > ");
+                    String tipo = scanner.next();
 
-                    cofrinho.mostrarMoeda();
+                    System.out.print("\nValor da moeda > ");
+                    double valor = scanner.nextDouble();
+
+                    MoedaClasseAbstrata moedaRemover = null;
+
+                    switch (tipo.toLowerCase()){
+                        case "real":
+                            moedaRemover = new Real(valor);
+                            break;
+                        case "dolar":
+                            moedaRemover = new Dolar(valor);
+                            break;
+                        case "euro":
+                            moedaRemover = new Euro(valor);
+                            break;
+                        default:
+                            System.out.println("Moeda inválida");
+                            break;
+                    }
+
+                    boolean removido = cofrinho.removerMoeda(moedaRemover);
+
+                    if (removido) {
+                        System.out.println("Moeda removida");
+                    } else {
+                        System.out.println("Moeda não encontrada");
+                    }
                     break;
                 case 3:
                     System.out.println("\nA opção listar moedas foi selecionada.\n");

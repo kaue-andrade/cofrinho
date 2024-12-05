@@ -11,8 +11,9 @@ public class Cofrinho {
         moedas.add(moeda);
     }
 
-    public void removerMoeda(MoedaClasseAbstrata moeda){
+    public boolean removerMoeda(MoedaClasseAbstrata moeda){
         moedas.remove(moeda);
+        return true;
     }
 
     public void mostrarMoeda(){
