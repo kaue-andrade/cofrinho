@@ -6,18 +6,20 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        // Mensagem decorativa do sistema cofrinho
+
         System.out.println("=-=-=-==-=-=-=-=");
         System.out.println(" $ Cofrinho $ ");
         System.out.println("=-=-=-==-=-=-=-=");
 
-        Cofrinho cofrinho = new Cofrinho();
+        Cofrinho cofrinho = new Cofrinho(); // Cria uma instância associada a classe Cofrinho
 
         int removermoeda;
         int escolha = 0;
         String opcao = "n";
         MoedaClasseAbstrata indice;
 
-        while (escolha != 5){
+        while (escolha != 5){ // Se for = 5, encerrará todo o algoritmo
             System.out.println();
             System.out.println("=-=-=-=-=-=-=-=-=-=-=");
             System.out.println("1 - Adicionar moeda");
@@ -27,6 +29,7 @@ public class Main {
             System.out.println("5 - Sair");
             System.out.println("=-=-=-=-=-=-=-=-=-=-=");
 
+            // Implementação do scanner para solicitar o valor da variável "escolha"
 
             System.out.print("\nDigite sua escolha: ");
             escolha = scanner.nextInt();
@@ -79,12 +82,15 @@ public class Main {
                     switch (tipo.toLowerCase()){
                         case "real":
                             moedaRemover = new Real(valor);
+                            System.out.println(moedaRemover);
                             break;
                         case "dolar":
                             moedaRemover = new Dolar(valor);
+                            System.out.println(moedaRemover);
                             break;
                         case "euro":
                             moedaRemover = new Euro(valor);
+                            System.out.println(moedaRemover);
                             break;
                         default:
                             System.out.println("Moeda inválida");

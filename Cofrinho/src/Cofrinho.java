@@ -16,27 +16,23 @@ public class Cofrinho {
         return true;
     }
 
-    public void mostrarMoeda(){
-        System.out.println(moedas);
-    }
-
-    public void listarMoedas() {
-        if (moedas.isEmpty()){
+    public void listarMoedas() { // Mostra as moedas como saída para que o usuário (ao acionar) consiga visualizar os valores
+        if (moedas.isEmpty()){ // Se "moedas estiver vazia, mostrará a mensagem que está vazia"
             System.out.println("O cofrinho está vazio. ");
             return;
         }
 
-        for (MoedaClasseAbstrata moeda: moedas) {
-            System.out.println(moeda.info());
+        for (MoedaClasseAbstrata moeda: moedas) { // Faz um for para listar todas as moedas
+            System.out.println(moeda.info()); // Chama o método info estabelecido na MoedaClasseAbstrata e
         }
     }
 
-    public double calcularTotalReais() {
-        double total = 0;
+    public double calcularTotalReais() { // Calcula o total em Reais de cada moeda adicionada a lista
+        double total = 0; // Inicia a variável total como 0 para que não entre em looping
         for (MoedaClasseAbstrata moeda: moedas) {
-            total += moeda.converterReais();
+            total += moeda.converterReais(); // Na variável total, será armazenada cada valor da moeda com sua respectiva conversão para real
         }
 
-        return total;
+        return total; // Retorna a variável total
     }
 }
