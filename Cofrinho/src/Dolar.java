@@ -1,4 +1,6 @@
 public class Dolar extends MoedaClasseAbstrata { // A classe Dolar é uma extensão da MoedaClasseAbstrata
+    // Faz a configuração dos atributos herdados da superclasse
+    // Passa o valor passado pelo usuário e define que o real é um moeda dos EUA
     public Dolar(double valor){
         super(valor, "EUA");
     }
@@ -13,5 +15,5 @@ public class Dolar extends MoedaClasseAbstrata { // A classe Dolar é uma extens
     @Override
     public String info(){
         return "Dólar: " + valor;
-    }
+    } // Faz o retorno de dólar com seu valor específico
 }

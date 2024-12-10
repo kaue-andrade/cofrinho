@@ -1,10 +1,9 @@
 public abstract class MoedaClasseAbstrata {
-    // Variáveis que somente as subclasses poderam usar devido ao protected
     // Valor = valor da moeda a ser implementada
     // País = País ao qual a moeda se refere
 
-    protected double valor;
-    protected String pais;
+    public double valor;
+    public String pais;
 
     public MoedaClasseAbstrata(double valor, String pais) { // Método construtor é responsável por inicializar os atrubytis do objeto
         this.valor = valor;
@@ -15,7 +14,10 @@ public abstract class MoedaClasseAbstrata {
     //Definem como as outras devem implementar concretamente e se comportar
 
     public abstract double converterReais(); //Método abstrato
-    public abstract String info(); //NMétodo abstrato
+    public abstract String info(); // Método abstrato
+
+    // Sobreescrever o método padrão de comparação de objetos em Java para verificar
+    // se dois objetos de um classe específica são considerados iguais
 
     @Override
     public boolean equals(Object obj){
