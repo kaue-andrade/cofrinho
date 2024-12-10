@@ -81,7 +81,10 @@ public class Main { // Classe principal
                     break;
                 case 2: // No caso 2, implementa a remoção da moeda do ArrayList
 
-                    System.out.println("\n=-=-=-= Remoção da moeda =-=-=-=");
+                    System.out.println("\n=-=-=-= Remoção da moeda =-=-=-=\n");
+
+                    cofrinho.chamarListarMoedas();
+
                     System.out.print("\nTipo da moeda > ");
                     String tipo = scanner.next();
 
